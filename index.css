@@ -1,0 +1,232 @@
+/* =========================
+   PREMIUM JS PORTFOLIO CSS
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050505, #111111, #1a1a1a);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 40px;
+}
+
+
+/* Main Heading */
+
+center {
+    animation: fadeDown 1s ease;
+}
+
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffd700, #fff2a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+hr {
+    width: 70%;
+    height: 3px;
+    border: none;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ffd700,
+        transparent
+    );
+    margin-bottom: 50px;
+}
+
+
+
+/* Project Container */
+
+ol {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 25px;
+    list-style-position: inside;
+    counter-reset: project;
+}
+
+
+
+/* Project Cards */
+
+li {
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,215,0,0.25);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    font-size: 18px;
+
+    transition: 
+    transform .35s ease,
+    box-shadow .35s ease,
+    border .35s ease;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.4);
+
+    animation: fadeUp .8s ease forwards;
+}
+
+
+
+li:hover {
+
+    transform: translateY(-10px) scale(1.03);
+
+    border-color:#ffd700;
+
+    box-shadow:
+    0 0 25px rgba(255,215,0,0.35);
+
+}
+
+
+
+/* Links */
+
+a {
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+
+    display:block;
+
+}
+
+
+
+a b {
+
+    font-weight:600;
+
+}
+
+
+
+a:hover {
+
+    color:#ffd700;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* Number Styling */
+
+li::marker {
+
+    color:#ffd700;
+
+    font-weight:bold;
+
+    font-size:22px;
+
+}
+
+
+
+/* Animations */
+
+@keyframes fadeDown {
+
+    from {
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:600px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+
+    h1{
+
+        font-size:28px;
+        text-align:center;
+
+    }
+
+
+    ol{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    li{
+
+        padding:20px;
+
+    }
+
+}
