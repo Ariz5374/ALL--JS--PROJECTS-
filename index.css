@@ -245,3 +245,61 @@ li::marker {
 #clearBtn:hover{
     background:#666;
 }
+/* =========================
+   PROJECT DESCRIPTIONS
+   ========================= */
+
+li span{
+    display:block;
+    margin-top:10px;
+    font-size:14px;
+    color:#bfbfbf;
+    line-height:1.6;
+    transition:.3s;
+}
+
+li:hover span{
+    color:white;
+}
+
+/* =========================
+   ICON ANIMATION
+   ========================= */
+
+li b{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:20px;
+    transition:.3s;
+}
+
+li:hover b{
+    transform:translateX(5px);
+}
+
+/* =========================
+   CARD GLOW EFFECT
+   ========================= */
+
+li::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    background:linear-gradient(135deg,
+    rgba(255,215,0,.15),
+    transparent);
+    opacity:0;
+    transition:.4s;
+    pointer-events:none;
+}
+
+li{
+    position:relative;
+    overflow:hidden;
+}
+
+li:hover::before{
+    opacity:1;
+}
