@@ -229,4 +229,19 @@ li::marker {
 
     }
 
+}#clearBtn{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    background:#444;
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+#clearBtn:hover{
+    background:#666;
 }
